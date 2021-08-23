@@ -12,7 +12,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() != 6 {
         eprintln!("Usage: {} FILE PIXELS SEPARATOR UPPERLEFT LOWERRIGHT", args[0]);
-        eprintln!("Example: {} mandel.png 1000x750 -1.20,0.35 -1,0.20", args[0]);
+        eprintln!("Example: {} mandel.png 1000x750 x -1.20,0.35 -1,0.20", args[0]);
         std::process::exit(1);
     }
     let bounds= parse_pair(&args[2], char::from_str(&args[3]).expect("Seperator conversion failed")).expect("Parsing of image dimensions failed with given arguments");
