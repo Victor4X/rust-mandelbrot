@@ -64,20 +64,20 @@ fn parse_pair<T: FromStr>(s: &str, separator: char) -> Option<(T, T)> {
     }
 }
 
-// Parse string to complex number ex: 1.03,2.58 -> Complex<f64> {re: 1.03, im: 2.58}
-fn parse_complex(s: &str) -> Option<Complex<f64>> {
-    match parse_pair(s, ',') {
-        Some((re, im)) => Some(Complex { re, im }),
-        None => None
-    }
-}
-
 #[test]
 fn test_parse_pair() {
     assert_eq!(parse_pair::<i32>("", ','), None);
     assert_eq!(parse_pair::<i32>("10,", ','), None);
     assert_eq!(parse_pair::<i32>(",10", ','), None);
     assert_eq!(parse_pair::<i32>("10,20", ','), Some((10, 20)));
+}
+
+// Parse string to complex number ex: 1.03,2.58 -> Complex<f64> {re: 1.03, im: 2.58}
+fn parse_complex(s: &str) -> Option<Complex<f64>> {
+    match parse_pair(s, ',') {
+        Some((re, im)) => Some(Complex { re, im }),
+        None => None
+    }
 }
 
 // Function for mapping a given pixel position in a given image size to a point on the complex plane within two given complex points
