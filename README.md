@@ -2,5 +2,5 @@
 Mandelbrot explorer written in rust
 
 ## TODO:
-[x] Multithreading
-[ ] Winit + Pixels
+- [x] Multithreading
+- [ ] Winit + Pixels
