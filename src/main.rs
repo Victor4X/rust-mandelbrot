@@ -23,7 +23,7 @@ fn main() {
     
 
     // Multithreading stuff here
-    let threads = 256;
+    let threads = 256; // Higher number = More speed
     let rows_per_band = bounds.1 / threads + 1;
 
     {
