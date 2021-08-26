@@ -115,14 +115,14 @@ fn main() -> Result<(), Error> {
 
             // Zooming
             if input.key_pressed(VirtualKeyCode::Z) {
-                let scalar = 0.05;
+                let scalar = 0.10;
                 
                 upper_left -= scalar*(upper_left-lower_right)/2.0;
                 lower_right += scalar*(upper_left-lower_right)/2.0;
                 window.request_redraw();
             }
             if input.key_pressed(VirtualKeyCode::X) {
-                let scalar = 0.05;
+                let scalar = 0.10;
                 
                 upper_left += scalar*(upper_left-lower_right)/2.0;
                 lower_right -= scalar*(upper_left-lower_right)/2.0;
