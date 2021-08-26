@@ -1,6 +1,11 @@
 # rust-mandelbrot
 Mandelbrot explorer written in rust
 
+## Controls:
+WASD -> Translation  
+ZX -> Zoom  
+Space -> Reset  
+
 ## TODO:
 - [x] Multithreading
 - [X] Winit + Pixels
