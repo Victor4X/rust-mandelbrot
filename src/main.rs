@@ -128,7 +128,13 @@ fn main() -> Result<(), Error> {
                 lower_right -= scalar*(upper_left-lower_right)/2.0;
                 window.request_redraw();
             }
-            
+
+            // Resetting
+            if input.key_pressed(VirtualKeyCode::Space) {
+                upper_left = Complex { re: -1.0, im: 1.0 };
+                lower_right = Complex { re: 1.0, im: -1.0 };
+                window.request_redraw();
+            }
         }
     });
     //write_image(&args[1], &pixels, bounds).expect("Image writing failed"); TODO: Use somewhere else
