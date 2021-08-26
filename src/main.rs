@@ -113,7 +113,7 @@ fn main() -> Result<(), Error> {
                 window.request_redraw();
             }
 
-            // Zooming
+            // Zooming TODO: Still not completely centered (for small bounds)
             if input.key_pressed(VirtualKeyCode::Z) {
                 let scalar = 0.10;
                 
