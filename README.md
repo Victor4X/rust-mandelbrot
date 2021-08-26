@@ -5,6 +5,7 @@ Mandelbrot explorer written in rust
 WASD -> Translation  
 ZX -> Zoom  
 Space -> Reset  
+Escape -> Exit  
 
 ## TODO:
 - [x] Multithreading
